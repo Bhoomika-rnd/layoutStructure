@@ -43,7 +43,7 @@
                                                 <a href="#" class="btn btn-round btn-warning btn-icon btn-sm edit"><i class="far fa-calendar-alt"></i></a>
                                                 <a href="#" class="btn btn-round btn-danger btn-icon btn-sm remove"><i class="fas fa-times"></i></a>
                                             </td>
-                                    </tr>
+                              </tr>
                                     @endforeach
                                
                             </tbody>
