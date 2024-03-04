@@ -37,7 +37,11 @@ Route::group(['prefix' => 'leads','namespace' => 'Admin','middleware' => ['auth'
     Route::get('/', [LeadsController::class, 'index']);
     Route::get('/create', [LeadsController::class,'create'])->name('leads.create');
     Route::get('/{id}', [LeadsController::class, 'show']);
-    Route::delete('/delete/{id}', [LeadsController::class,'destroy'])->name('leads.destroy');
+
+    Route::delete('/delete/{id}', [LeadsController::class, 'destroy'])->name('leads.destroy');
+
+
+
     Route::post('/store', [LeadsController::class,'store'])->name('leads.store');
     Route::get('/edit/{id}', [LeadsController::class,'edit'])->name('leads.edit');
     Route::put('/update/{id}', [LeadsController::class,'update'])->name('leads.update');

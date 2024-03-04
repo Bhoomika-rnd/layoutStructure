@@ -37,6 +37,10 @@
   <script src="{{ asset( 'assets/js/now-ui-dashboard.min.js?v=1.1.1" type="text/javascript') }}"></script>
   <!-- Now Ui Dashboard DEMO methods, don't include it in your project! -->
   <script src="{{ asset( 'assets/demo/demo.js') }}"></script>
+  
+
+
+
   <script>
     $(document).ready(function() {
       demo.checkFullPageBackgroundImage();
@@ -117,3 +121,6 @@
       setFormValidation('#RangeValidation');
     });
   </script>
+ 
+
+

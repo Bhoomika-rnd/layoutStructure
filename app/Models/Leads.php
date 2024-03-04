@@ -51,7 +51,9 @@ class Leads extends Model
         return Validator::make($data, $rules,$messages);
     }
 
-    public static function createLeads($data){
+    public static function createLeads($data){  
+
+//        dd($data);
 
         $leads = Leads::create([
             'firstName' => $data['firstName'],
@@ -61,6 +63,46 @@ class Leads extends Model
         ]);
     
         return $leads;
+    }
+
+
+    public static function updateLeads($lead,$data){
+
+
+    $leadData = [
+        'firstName' => $data['firstName'],
+        'lastName' => $data['lastName'],
+        'email' => $data['email'],
+        'phone' => $data['phone'],
+
+
+    ];
+
+    if (isset($data['email'])) {
+        if ($data['email'] !== $lead->email) {
+            $leadData['email'] = $data['email'];
+        }
+    }
+
+    if (isset($data['phone'])) {
+        if ($data['phone'] !== $lead->phone) {
+            $leadData['phone'] = $data['phone'];
+        }
+    }
+  
+
+    $lead->update($leadData);
+
+    return $lead;
+
+    }
+
+
+    public static function deleteLead($lead){
+
+            Leads::destroy($lead->id);
+
+            return true;
     }
 
 

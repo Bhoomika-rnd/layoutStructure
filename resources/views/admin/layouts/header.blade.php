@@ -7,7 +7,7 @@
   <link rel="icon" type="image/png" href="../assets/img/favicon.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
-    Now UI Dashboard PRO by Creative Tim
+    Layout Structure
   </title>
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
   <!--     Fonts and icons     -->
@@ -36,7 +36,15 @@
     })(window, document, 'script', 'dataLayer', 'GTM-NKDMSK6');
   </script>
   <!-- End Google Tag Manager -->
+   <style type="text/css">
+      #ofBar{
+        display: none !important;
+      }
+  </style>
+
 </head>
+
+
 
 <body class=" sidebar-mini ">
   <!-- Google Tag Manager (noscript) -->
