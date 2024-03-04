@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Admin\LeadsController;
+use App\Http\Controllers\Admin\ExcelImportController;
 
 
 /*
@@ -45,6 +46,13 @@ Route::group(['prefix' => 'leads','namespace' => 'Admin','middleware' => ['auth'
     Route::post('/store', [LeadsController::class,'store'])->name('leads.store');
     Route::get('/edit/{id}', [LeadsController::class,'edit'])->name('leads.edit');
     Route::put('/update/{id}', [LeadsController::class,'update'])->name('leads.update');
+});
+
+
+Route::group(['namespace' => 'Admin','middleware' => ['auth']],function(){
+ 
+    Route::get('/import-excel', [ExcelImportController::class,'index'])->name('import.excel');
+    Route::post('/import-excel', [ExcelImportController::class,'import']);
 });
 
 
